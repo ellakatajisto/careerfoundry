@@ -36,9 +36,14 @@
   justify-content: center;
 }
 
-#careerfoundry-icon {
+/* #careerfoundry-icon {
   position:absolute;
   margin-left: -320px;
+} */
+
+.Image-container {
+  position:fixed;
+  left: 0;
 }
 
 .Course-card {

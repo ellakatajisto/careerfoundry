@@ -4,7 +4,7 @@ import CourseCard from './CourseCard';
 import careerFoundry from "./careerFoundry.png"
 
 function App() {
-  
+
   // for fetching the courses from the API
   const [courses, setCourses] = useState([]);
   // whether the info window is open or not
@@ -37,7 +37,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-       <img src={careerFoundry} id="careerfoundry-icon"></img>
+        <div className="Image-container">
+        <img src={careerFoundry} id="careerfoundry-icon"></img>
+        </div>
       <p>Course selection</p>
       </header>
       <div>
