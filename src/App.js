@@ -6,6 +6,18 @@ import careerFoundry from "./careerFoundry.png"
 function App() {
   // for fetching the courses from the API
   const [courses, setCourses] = useState([]);
+  // whether the info window is open or not
+  const [infoIsOpen, setInfoIsOpen] = useState(false);
+  const [activeCourse, setActiveCourse] = useState(null);
+
+    const handleCloseInfo = () => {
+      setInfoIsOpen(false);
+    };
+  
+    const handleOpenInfo = () => {
+      setInfoIsOpen(true);
+      console.log("handle open info")
+    };
 
   // useEffect -> without dependencies, only trigger on first render
   useEffect(() => {
@@ -22,12 +34,18 @@ function App() {
     <div className="App">
       <header className="App-header">
        <img src={careerFoundry} id="careerfoundry-icon"></img>
-      <p>Take a look at our courses!</p>
+      <p>Course selection</p>
       </header>
       <div>
         <div className="App-body">
         {courses.map((course) => {
-          return <CourseCard course={course}></CourseCard>
+          return <CourseCard course={course} 
+          handleCloseInfo={handleCloseInfo}
+          handleOpenInfo={handleOpenInfo}
+          infoIsOpen={infoIsOpen}
+          setInfoIsOpen={setInfoIsOpen}
+          activeCourse={activeCourse}
+          setActiveCourse={setActiveCourse}></CourseCard>
         })}
         </div>
       </div>

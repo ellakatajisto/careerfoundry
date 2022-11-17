@@ -42,22 +42,21 @@
 }
 
 .Course-card {
-  color: teal !important;
-  /* min-height: 430px;
+  /* 
   min-width: 350px; */
+  min-height: 220px;
   margin: 10px;
   padding: 10px;
+  background-color: #243b52 !important;
+  color: white !important;
   /* float: left; */
 }
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+ .Card-button:hover { 
+    background-color: #000 !important;
+    border-color: white !important;
+    /* box-shadow: 'none'!important; */
+ }
