@@ -14,16 +14,41 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #243b52;
+  /* min-height: 100vh; */
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
   color: white;
 }
 
+.App-body {
+  /* border: solid 1px black; */
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#careerfoundry-icon {
+  position:absolute;
+  margin-left: -320px;
+}
+
+.Course-card {
+  color: teal !important;
+  /* min-height: 430px;
+  min-width: 350px; */
+  margin: 10px;
+  padding: 10px;
+  /* float: left; */
+}
 .App-link {
   color: #61dafb;
 }

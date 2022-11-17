@@ -1,5 +1,7 @@
 import './App.css';
 import {useEffect, useState} from 'react';
+import CourseCard from './CourseCard';
+import careerFoundry from "./careerFoundry.png"
 
 function App() {
   // for fetching the courses from the API
@@ -18,13 +20,16 @@ function App() {
 
   return (
     <div className="App">
-      {/* <header className="App-header">
-      </header> */}
+      <header className="App-header">
+       <img src={careerFoundry} id="careerfoundry-icon"></img>
+      <p>Take a look at our courses!</p>
+      </header>
       <div>
-        <p>Take a look at the courses!</p>
-        {courses.map(({title}) => (
-          <p>Course name: {title}</p>
-        ))}
+        <div className="App-body">
+        {courses.map((course) => {
+          return <CourseCard course={course}></CourseCard>
+        })}
+        </div>
       </div>
     </div>
   );
