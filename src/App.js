@@ -4,11 +4,15 @@ import CourseCard from './CourseCard';
 import careerFoundry from "./careerFoundry.png"
 
 function App() {
+  
   // for fetching the courses from the API
   const [courses, setCourses] = useState([]);
   // whether the info window is open or not
   const [infoIsOpen, setInfoIsOpen] = useState(false);
+  // determine the active course for the
   const [activeCourse, setActiveCourse] = useState(null);
+  // an array for the favorite courses
+  const [favouriteCourses, setFavouriteCourses] = useState([]);
 
     const handleCloseInfo = () => {
       setInfoIsOpen(false);
@@ -43,9 +47,10 @@ function App() {
           handleCloseInfo={handleCloseInfo}
           handleOpenInfo={handleOpenInfo}
           infoIsOpen={infoIsOpen}
-          setInfoIsOpen={setInfoIsOpen}
           activeCourse={activeCourse}
-          setActiveCourse={setActiveCourse}></CourseCard>
+          setActiveCourse={setActiveCourse}
+          favouriteCourses={favouriteCourses}
+          setFavouriteCourses={setFavouriteCourses}></CourseCard>
         })}
         </div>
       </div>

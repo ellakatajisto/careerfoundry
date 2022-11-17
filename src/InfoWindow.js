@@ -17,7 +17,7 @@ export function InfoWindow(props) {
       pb: 3,
     };
 
-    const { course, setInfoIsOpen, infoIsOpen, handleOpenInfo, handleCloseInfo } = props;
+    const { course, infoIsOpen,  handleCloseInfo } = props;
 
     return (
         <>
