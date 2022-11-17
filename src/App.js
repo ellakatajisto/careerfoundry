@@ -40,7 +40,7 @@ function App() {
         <div className="Image-container">
         <img src={careerFoundry} id="careerfoundry-icon"></img>
         </div>
-      <p>Course selection</p>
+      <h1>Course selection</h1>
       </header>
       <div>
         <div className="App-body">
